@@ -81,3 +81,15 @@ Expected:
 - Closes OfficeCLI resident.
 - Checks hidden WINWORD processes.
 - Retries validation after lock release.
+
+## Scenario 9: Flowcharts Missing No Branches
+
+Input: "图4-11到图4-53流程图都没有否的判断流程，参考图4-9修改."
+
+Expected:
+
+- Only changes the requested flowcharts; does not touch code figures, screenshots, or protected figures.
+- Adds a decision diamond with `是` and `否`.
+- Routes `否→返回对应管理页或功能页重新录入→回到录入步骤`.
+- Keeps all labels Chinese and visually similar to the provided reference.
+- Emits a flowchart manifest and verifies DOCX embedded images, PDF-rendered pages, and target flowchart black/white style.

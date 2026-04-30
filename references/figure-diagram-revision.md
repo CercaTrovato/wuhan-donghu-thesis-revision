@@ -62,6 +62,38 @@ For revisions that replace screenshots with flowcharts:
 - Insert figure paragraph with `ImageParagraph`.
 - Caption with `ThesisCaption`.
 
+### Flowchart Condition Branches / 是否条件判断
+
+For management, data entry, submit, edit, delete, query, login, registration, test, or validation workflows, do not draw a simple vertical chain if the process contains information checking or submission. Add a decision diamond with Chinese `是` and `否` branches.
+
+Recommended pattern:
+
+```text
+开始
+进入对应管理页/功能页
+录入、选择或查询信息
+提交新增、修改、查询或保存
+信息是否正确
+  否→返回对应管理页或功能页重新录入→回到录入步骤
+  是→校验/保存/更新/展示结果
+结束
+```
+
+Layout rule from the reference project:
+
+- Put the main process vertically.
+- Put `是` below the decision diamond and continue downward.
+- Put `否` on the right side, leading to a return box such as `返回类型管理页\n重新录入`.
+- Draw the return loop from that box back to the input/selection step, not to the start node.
+- Keep all node labels in Chinese. Use `信息是否正确`, `类型信息是否正确`, `登录信息是否正确`, `查询信息是否正确`, or a similarly specific phrase.
+
+Verification:
+
+- Produce a manifest such as `output/figures/flowchart_negative_branch_manifest.json`.
+- For every targeted flowchart, record figure caption, decision text, and negative branch text.
+- Verify the DOCX embedded images match the generated flowchart files.
+- Export PDF and render the pages containing the changed flowcharts; XML checks alone are insufficient for branch visibility and line overlap.
+
 ## Protected Figures
 
 If the user says a figure was manually revised, mark it protected and exclude it from rewrite scripts. If needed, pass an exclusion pattern to validators, such as:
