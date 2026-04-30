@@ -19,6 +19,10 @@ case "$target" in
     ;;
 esac
 
+if [ -n "${WDU_THESIS_REVISION_SKILL_ROOT:-}" ]; then
+  skill_root="$WDU_THESIS_REVISION_SKILL_ROOT"
+fi
+
 if ! command -v git >/dev/null 2>&1; then
   echo "git is required. Install Git first, then rerun this installer." >&2
   exit 1

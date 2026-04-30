@@ -52,6 +52,14 @@ Claude target installs to:
 
 Run the same one-line install command again. If the skill was installed by Git, the installer performs a fast-forward pull. If a non-Git directory already exists, it is moved to a timestamped backup before cloning.
 
+## Custom Skill Root
+
+For testing or nonstandard agent setups, set `WDU_THESIS_REVISION_SKILL_ROOT` to override the install root. The skill will be installed under:
+
+```text
+<WDU_THESIS_REVISION_SKILL_ROOT>/wuhan-donghu-thesis-revision
+```
+
 ## Manual Install
 
 Codex:

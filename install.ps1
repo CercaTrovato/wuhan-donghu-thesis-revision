@@ -10,7 +10,10 @@ $target = $env:WDU_THESIS_REVISION_TARGET
 if ([string]::IsNullOrWhiteSpace($target)) { $target = "codex" }
 $target = $target.ToLowerInvariant()
 
-if ($target -eq "claude") {
+$rootOverride = $env:WDU_THESIS_REVISION_SKILL_ROOT
+if (-not [string]::IsNullOrWhiteSpace($rootOverride)) {
+    $skillRoot = $rootOverride
+} elseif ($target -eq "claude") {
     $skillRoot = Join-Path $HOME ".claude\skills"
 } elseif ($target -eq "codex") {
     $skillRoot = Join-Path $HOME ".agents\skills"
