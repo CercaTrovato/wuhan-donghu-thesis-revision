@@ -1,0 +1,6 @@
+interface:
+  display_name: "武汉东湖论文修改"
+  short_description: "按修改说明修订武汉东湖学院本科论文初稿"
+  default_prompt: "Use $wuhan-donghu-thesis-revision to revise an existing Wuhan Donghu College thesis draft from modification notes and annotated screenshots."
+policy:
+  allow_implicit_invocation: true
