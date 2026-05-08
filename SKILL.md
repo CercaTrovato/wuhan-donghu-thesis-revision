@@ -18,7 +18,7 @@ This skill inherits formatting and content standards from `wuhan-donghu-thesis`.
 3. Read `references/issue-localization.md` before editing.
 4. If required materials are missing or unclear, read `references/materials-needed.md`.
 5. Read `references/inherited-wdu-format-rules.md` before touching formatting.
-6. Before using OfficeCLI for non-trivial `.docx` structure or formatting, search `references/officecli-1.0.66-full-reference.md` for the exact command/element schema. This includes headers/footers, sections, TOC, fields, page numbers, indentation, tables, numbering, images, raw XML, validation, and HTML previews.
+6. Before using OfficeCLI for non-trivial `.docx` structure or formatting, search `references/officecli-1.0.72-full-reference.md` for the exact command/element schema. This includes headers/footers, sections, TOC, fields, page numbers, indentation, tables, numbering, images, raw XML, validation, and HTML previews.
 7. Read only the object-specific reference needed next:
    - Tables/OpenXML: `references/table-revision.md` and `references/docx-openxml-repair.md`
    - Diagrams/ER/entity/flowcharts: `references/figure-diagram-revision.md`
